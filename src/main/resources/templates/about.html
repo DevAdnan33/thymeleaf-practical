@@ -9,8 +9,15 @@
   </head>
 
   <body>
-    <h1>My name is <span th:text="${name}"></span></h1>
+    <h1>My name is <span th:text="${#strings.toUpperCase(name)}"></span></h1>
+    
     <h1>Current time is <span th:text="${date}"></span></h1>
+
+    <div th:with="a=12,b=24, n=${name}">
+        <h1 th:text="${a} + ${b}"></h1>
+        <h2 th:text="'Name of person is ' + ${n}"></h2>
+    </div>
+
   </body>
 
 </html>
