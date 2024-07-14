@@ -33,4 +33,9 @@ public class MyController {
         model.addAttribute("mylist", myList);
         return "condition";
     }
+
+    @GetMapping("/services.html")
+    public String services() {
+        return "services";
+    }
 }
