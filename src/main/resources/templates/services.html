@@ -8,11 +8,11 @@
 </head>
 
 <body>
-    <h1>Welcome to my code.</h1>
-    <footer th:replace="footer :: footer1">
+    <footer th:replace="footer :: footer1(${title},${subtitle})">
         <!-- th:include will include fragment inside content excluding footer tag -->
         <!-- th:insert will add fragment inside this tag -->
         <!-- th:replace wil replace the this tag.-->
+        
     </footer>
 </body>
 

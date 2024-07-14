@@ -35,7 +35,9 @@ public class MyController {
     }
 
     @GetMapping("/services.html")
-    public String services() {
+    public String services(Model model) {
+        model.addAttribute("title", "This is footer");
+        model.addAttribute("subtitle", new Date().toString());
         return "services";
     }
 }
