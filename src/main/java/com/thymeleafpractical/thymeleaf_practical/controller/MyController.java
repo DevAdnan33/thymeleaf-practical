@@ -24,4 +24,13 @@ public class MyController {
         model.addAttribute("names", names);
         return "example-loop";
     }
+
+    @GetMapping("/condition.html")
+    public String conditionHandler(Model model) {
+        model.addAttribute("isActive", true);
+        model.addAttribute("gender", "F");
+        List<Integer> myList = List.of(12, 34, 6, 16, 8);
+        model.addAttribute("mylist", myList);
+        return "condition";
+    }
 }
