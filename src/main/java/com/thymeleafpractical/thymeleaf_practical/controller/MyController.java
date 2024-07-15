@@ -40,4 +40,11 @@ public class MyController {
         model.addAttribute("subtitle", new Date().toString());
         return "services";
     }
+
+    @GetMapping("/aboutnew.html")
+    public String aboutnew(Model model) {
+        model.addAttribute("title", "This is footer");
+        model.addAttribute("subtitle", new Date().toString());
+        return "aboutnew";
+    }
 }
